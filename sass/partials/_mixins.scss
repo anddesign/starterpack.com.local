@@ -1,0 +1,155 @@
+// Breakpoints
+@mixin bp-xl() {
+
+	@media only screen and (min-width: 1360px) {
+		
+		@content;
+	}
+}
+
+@mixin bp-lg() {
+
+	@media only screen and (min-width: 1200px) {
+		
+		@content;
+	}
+}
+
+@mixin bp-md() {
+
+	@media only screen and (min-width: 992px) {
+	
+		@content;
+	}
+}
+
+@mixin bp-sm() {
+	
+	@media only screen and (min-width: 768px) {
+		
+		@content;
+	}
+}
+
+@mixin bp-xs() {
+	
+	@media only screen and (min-width: 400px) {
+		
+		@content;
+	}
+}
+
+// Center align block element
+@mixin center-block() {
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Transition element
+@mixin transition($transition...) {
+	-moz-transition:    $transition;
+	-o-transition:      $transition;
+	-webkit-transition: $transition;
+	transition:         $transition;
+}
+@mixin transition-property($property...) {
+	-moz-transition-property:    $property;
+	-o-transition-property:      $property;
+	-webkit-transition-property: $property;
+	transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+	-moz-transition-property:    $duration;
+	-o-transition-property:      $duration;
+	-webkit-transition-property: $duration;
+	transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+	-moz-transition-timing-function:    $timing;
+	-o-transition-timing-function:      $timing;
+	-webkit-transition-timing-function: $timing;
+	transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+	-moz-transition-delay:    $delay;
+	-o-transition-delay:      $delay;
+	-webkit-transition-delay: $delay;
+	transition-delay:         $delay;
+}
+
+// Vetically align content
+@mixin center-vertically() {
+	
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+ }
+
+// Turn an element into a circle
+ @mixin circle($width) {
+
+	width: $width;
+	height: $width;
+	overflow: hidden;
+	-webkit-border-radius: $width/2;
+	   -moz-border-radius: $width/2;
+			border-radius: $width/2;
+}
+
+// Animations and keyframe
+@mixin keyframes($animation-name) {
+
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}  
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}  
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};
+}
+
+@mixin helvetica($a : none){
+	
+	@if $a == bold{
+		font-family:"HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosBold', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
+		font-weight:600; 
+		font-stretch:normal;
+	} @else if $a == medium {
+		font-family:"HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+		font-weight:400;
+		font-stretch:normal;
+	} @else if $a == light {
+		font-family:"HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+		font-weight:300;
+		font-stretch:normal;
+	} @else if $a == thin{
+		font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+		font-weight:200;
+		font-stretch:normal;
+	} @else {
+		font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
+		font-weight:400; 
+		font-stretch:normal;
+	}
+}

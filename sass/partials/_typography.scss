@@ -1,0 +1,117 @@
+body {
+
+	font-size: 62.5%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+ 
+	@include helvetica();
+	font-weight: 500;
+	font-stretch: normal;
+	color: $colour-dark;
+}
+ 
+h1, h2, h3, h4, h5, h6 {
+ 
+	clear: both;
+	margin: 0;
+	font-weight: normal;
+	display: block;
+	@include helvetica(bold);
+}
+ 
+h1 {
+
+	font-size: 7.2em;
+}
+ 
+h2 {
+
+	font-size: 3.6em;
+}
+ 
+h3 {
+
+	font-size: 2.8em;
+}
+ 
+h4 {
+
+	font-size: 2.4em;
+}
+ 
+h5 {
+
+	font-size: 2em;
+}
+ 
+h5 {
+
+	font-size: 1.6em;
+}
+ 
+p {
+	
+	font-size: 1.6em;
+	margin-bottom: .8em;
+ 
+	&:last-child {
+
+		margin-bottom: 0;
+	}
+}
+ 
+a {
+
+	color: $colour-pri;
+	text-decoration: none;
+ 
+	&:hover,
+	&:focus,
+	&:active {
+
+		outline: 0;
+		color: $colour-pri;
+		text-decoration: none;
+	}
+
+	&.btn-start {
+
+		color: $colour-dark;
+		text-transform: uppercase;
+		border: 2px solid;
+		font-size: 1.6em;
+		padding: 15px 40px;
+		margin: 30px 0 0;
+		display: inline-block;
+	}
+
+	&.learn-more-btn {
+
+		color: $colour-light;
+		text-transform: uppercase;
+		border: 2px solid;
+		padding: 15px 40px;
+		margin: 30px 0 0;
+		display: inline-block;
+	}
+}
+ 
+dfn, cite, em, i {
+
+	font-style: italic;
+}
+ 
+blockquote, q {
+
+	quotes: "" "";
+ 
+	&:before,
+	&:after {
+		content: "";
+	}
+}

@@ -1,0 +1,12 @@
+bower_components/
+.sass-cache/
+node_modules/
+.DS_Store
+.idea/
+*.ipr
+*.iws
+/out/
+.idea_modules/
+.DS_Store
+*.zip
+ package-lock.json
